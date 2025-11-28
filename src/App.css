@@ -1,0 +1,25 @@
+@keyframes shimmerText {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.city-name {
+  font-size: 3rem;
+  font-weight: bold;
+  /* Shimmer gradient */
+  background: linear-gradient(
+    90deg,
+    #ffffff 20%,
+    rgba(0, 255, 255, 0.6) 40%, /* bright cyan */
+    #ffffff 60%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 2.5s linear infinite;
+}
